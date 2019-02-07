@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <title>Weight Converter</title>
+    <style>
+        body{
+            margin-top: 70px;
+            background:  #333;
+        }
+        .bottom{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-11">
+                <h1 class="display-5 text-center text-white">
+                    Weight Converter
+                </h1>
+                <form>
+                    <div class="form-group">
+                        <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card text-white bg-primary mb-1">
+                        <div class="card-body">
+                            <h4>Grams: </h4>
+                            <div id="gramsOutput"></div>
+                        </div>
+                    </div>
+                    <div class="card text-white bg-success mb-1">
+                        <div class="card-body">
+                            <h4>Kilograms: </h4>
+                            <div id="kgOutput"></div>
+                        </div>
+                    </div>
+                </div>
+                <i>
+                    <h5 class="bottom text-white text-center">Made by Siddharth Padwal <i class="em em-hearts"></i></h5>
+                </i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('output').style.visibility = 'hidden';
+        document.getElementById('lbsInput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility = 'visible';
+            let pounds = e.target.value;
+            document.getElementById('gramsOutput').innerHTML = pounds / 0.0022046;
+            document.getElementById('kgOutput').innerHTML = pounds / 2.2046;
+        });
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
